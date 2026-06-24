@@ -1,0 +1,41 @@
+.career-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.career-container h1 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.career-input {
+  width: 300px;
+  padding: 12px;
+  border: 2px solid #3498db;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.career-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.career-btn:hover {
+  background-color: #2980b9;
+}
+
+.career-result {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}

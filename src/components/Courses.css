@@ -1,0 +1,21 @@
+.courses-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.course-btn {
+  display: block;
+  width: 250px;
+  margin: 20px auto;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #5584e9;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.course-btn:hover {
+  background: #263c77;
+}

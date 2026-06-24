@@ -1,0 +1,36 @@
+.jobs-container {
+  padding: 40px;
+}
+
+.jobs-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.apply-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #1f3b77;
+  color: rgb(38, 23, 78);
+  border-radius: 8px;
+  cursor: pointer;
+}
