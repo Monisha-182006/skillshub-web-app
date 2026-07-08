@@ -27,7 +27,7 @@ function CareerGuide() {
       <h1>AI Career Guide 🚀</h1>
 
       <input
-        classname="career-input"
+        className="career-input"
         type="text"
         placeholder="Enter Your Skill"
         value={skill}
@@ -52,9 +52,6 @@ function CareerGuide() {
         Get Recommendation
       </button>
       <h2 className="career-result">{result}</h2>
-      <h2 style={{ marginTop: "20px" }}>
-        {result}
-      </h2>
     </div>
   );
 }

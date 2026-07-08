@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import "./Login.css";
+import "./Register.css";
 
-function Login() {
+function Register() {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
+    name: "",
     email: "",
+    mobile: "",
     password: "",
   });
 
@@ -17,8 +19,8 @@ function Login() {
     });
   };
 
-  const handleLogin = async () => {
-    const response = await fetch("http://127.0.0.1:8000/api/login/", {
+  const handleRegister = async () => {
+    const response = await fetch("http://127.0.0.1:8000/api/register/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -29,30 +31,35 @@ function Login() {
     const data = await response.json();
 
     if (response.ok) {
-
-  localStorage.setItem("isLoggedIn", "true");
-
-  localStorage.setItem("user", data.user);
-  localStorage.setItem("email", data.email);
-  localStorage.setItem("mobile", data.mobile);
-
-  alert("Login Successful");
-
-  navigate("/home");
-
-} else {
-  alert(data.message);
-}
+      alert("Registration Successful");
+      navigate("/login");
+    } else {
+      alert(data.message);
+    }
   };
 
   return (
-    <div className="login-container">
-      <h1>SkillsHub Login</h1>
+    <div className="register-container">
+      <h1>Register</h1>
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        onChange={handleChange}
+      />
 
       <input
         type="email"
         name="email"
         placeholder="Email"
+        onChange={handleChange}
+      />
+
+      <input
+        type="text"
+        name="mobile"
+        placeholder="Mobile Number"
         onChange={handleChange}
       />
 
@@ -63,14 +70,16 @@ function Login() {
         onChange={handleChange}
       />
 
-      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleRegister}>
+        Register
+      </button>
 
       <p>
-        Don't have an account?{" "}
-        <Link to="/register">Register</Link>
+        Already have an account?{" "}
+        <Link to="/login">Login</Link>
       </p>
     </div>
   );
 }
 
-export default Login;
+export default Register;

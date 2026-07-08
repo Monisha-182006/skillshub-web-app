@@ -3,9 +3,10 @@ from django.db import models
 class UserProfile(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
-    skill = models.CharField(max_length=100)
+    mobile = models.CharField(max_length=15)
+    password = models.CharField(max_length=255)
 
-    def __str__(self):
+    def _str_(self):
         return self.name
 
 
@@ -14,5 +15,5 @@ class Resume(models.Model):
     email = models.EmailField()
     skill = models.CharField(max_length=100)
 
-    def __str__(self):
+    def _str_(self):
         return self.name

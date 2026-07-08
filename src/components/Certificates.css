@@ -39,3 +39,47 @@
 .download-btn:hover {
   background: #1e40af;
 }
+.certificate-container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f7fb;
+}
+
+.certificate-card{
+    width: 500px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.certificate-card h1{
+    color:#1e40af;
+    margin-bottom:15px;
+}
+
+.certificate-card p{
+    color:#555;
+    font-size:18px;
+    margin-bottom:25px;
+}
+
+.download-btn{
+    padding:12px 28px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.download-btn:hover{
+    background:#1d4ed8;
+    transform:scale(1.05);
+}
